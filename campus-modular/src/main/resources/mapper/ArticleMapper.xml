@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oddfar.campus.business.mapper.ArticleMapper">
+
+    <resultMap id="BaseResultMap" type="com.oddfar.campus.business.domain.Article">
+        <result property="articleId" column="article_id" jdbcType="BIGINT"/>
+        <result property="articleTitle" column="article_title" jdbcType="VARCHAR"/>
+        <result property="articleContent" column="article_content" jdbcType="VARCHAR"/>
+        <result property="isAnonymous" column="is_anonymous" jdbcType="TINYINT"/>
+        <result property="delFlag" column="del_flag" jdbcType="BIT"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="createUser" column="create_user" jdbcType="BIGINT"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="updateUser" column="update_user" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        article_id,article_title,article_content,
+        is_anonymous,del_flag,create_time,
+        create_user,update_time,update_user
+    </sql>
+</mapper>
